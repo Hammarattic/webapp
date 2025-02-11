@@ -1,0 +1,12 @@
+﻿@model webapp.Models.ViewModel.PropertyViewModel
+
+<h2>Ejendomsoplysninger</h2>
+<ul>
+    <li>Husejer: @(Model.IsHomeOwner ? "Ja" : "Nej")</li>
+    <li>Adresse: @Model.Adress</li>
+    <li>By: @Model.ZipCode @Model.City</li>
+    <li>Købsdato: @Model.Bought.ToString("dd-MM-yyyy")</li>
+    <li>Har lån: @(Model.Hasloan ? "Ja" : "Nej")</li>
+    <li>Låntype: @Model.LoanType</li>
+    <li>Rente: @Model.InterestRate %</li>
+</ul>
